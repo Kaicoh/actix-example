@@ -1,8 +1,11 @@
 use actix_web::{get, App, HttpResponse, HttpServer, Responder};
+use models::Hello;
 
 #[get("/")]
 async fn hello() -> impl Responder {
-    HttpResponse::Ok().body("Hello world!")
+    HttpResponse::Ok().json(Hello {
+        msg: "Hello world!".to_string(),
+    })
 }
 
 #[actix_web::main]
