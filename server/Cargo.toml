@@ -8,4 +8,5 @@ edition = "2018"
 
 [dependencies]
 actix-web = "3"
+derive_more = "0.99"
 models = { path = "../models" }
